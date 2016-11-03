@@ -18,6 +18,7 @@
   "homepage": "https://github.com/hangilc/myclinic-web-practice#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "commander": "^2.9.0",
     "express": "^4.14.0",
     "http-proxy": "^1.15.2",
     "myclinic-config": "^2.1.0",
