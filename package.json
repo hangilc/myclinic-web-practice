@@ -1,0 +1,29 @@
+{
+  "name": "myclinic-web-practice",
+  "version": "1.0.0",
+  "description": "Local web server for practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hangilc/myclinic-web-practice.git"
+  },
+  "author": "Hangil Chang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hangilc/myclinic-web-practice/issues"
+  },
+  "homepage": "https://github.com/hangilc/myclinic-web-practice#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "http-proxy": "^1.15.2",
+    "myclinic-config": "^2.1.0",
+    "myclinic-drawer-print-server": "^2.0.0",
+    "myclinic-practice": "^1.1.17",
+    "myclinic-refer": "^1.1.0",
+    "myclinic-shohousen": "^1.1.0"
+  }
+}
