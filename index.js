@@ -7,24 +7,20 @@ var httpProxy = require("http-proxy");
 exports.run = function(config){
 	var app = express();
 	var proxy = httpProxy.createProxyServer({});
-	var port = config.port;
+	var port = config._web.port;
 
 	var subs = {
 		"practice": {
 			module: require("myclinic-practice"),
-			config: {}
 		},
 		"shohousen": {
 			module: require("myclinic-shohousen"),
-			config: config.shohousen
 		},
 		"refer": {
 			module: require("myclinic-refer"),
-			config: config.refer
 		},
 		"printer": {
 			module: require("myclinic-drawer-print-server"),
-			config: {}
 		}
 	};
 
@@ -32,7 +28,7 @@ exports.run = function(config){
 		var sub = subs[key];
 		var subapp = express();
 		var mod = sub.module;
-		var conf = sub.config;
+		var conf = config[key];
 		subapp.use(bodyParser.urlencoded({ extended: false }));
 		subapp.use(bodyParser.json());
 		mod.initApp(subapp, conf);
@@ -44,7 +40,7 @@ exports.run = function(config){
 	});
 
 	app.use("/service", function(req, res){
-		proxy.web(req, res, { target: config["service-url"] }, function(e){
+		proxy.web(req, res, { target: config._web["service-url"] }, function(e){
 			res.status(500).send({ error: e });
 		});
 	});

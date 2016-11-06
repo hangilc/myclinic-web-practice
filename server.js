@@ -6,26 +6,16 @@ var path = require("path");
 var program = require("commander");
 
 program
-	.option("-c, --config <configpath>", "Read configuration")
-	.option("-s, --service <service-url>", "Set service server")
-	.option("-p, --port <port>", "Set listening port")
+	.option("-c, --config <configpath>", "Read configuration", process.env.MYCLINIC_CONFIG)
+	.option("-s, --service <service-url>", "Set service server", "http://localhost:9000/service")
+	.option("-p, --port <port>", "Set listening port", 9001)
 	.parse(process.argv);
 
-var config = {};
-
-if( program.config ){
-	Config.extend(config, Config.read(program.config));
-} else {
-	Config.extend(config, Config.read(path.join(process.env.MYCLINIC_CONFIG, "practice")));
-}
-if( program.service ){
-	config["service-url"] = program.service;
-} else {
-	config["service-url"] = process.env.MYCLINIC_SERVER;
-}
-if( program.port ){
-	config.port = program.port;
-}
+var config = Config.read(program.config);
+config._web = {
+	"service-url": program.service,
+	"port": program.port
+};
 
 app.run(config);
 
