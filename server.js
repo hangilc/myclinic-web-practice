@@ -24,21 +24,9 @@ function ensureDir(pathname){
 	}
 }
 
-function fetchConfig(url, subs, cb){
-
-}
-
-program
-	.option("-c, --config <configpath>", "Read configuration", "auto")
-	.option("-s, --service <service-url>", "Set service server", "http://localhost:9000")
-	.option("-p, --port <port>", "Set listening port", toInt, 9001)
-	.option("--printer-settings <dirname>", "Set printer settings directory", "./printer-settings")
-	.parse(process.argv);
-
-if( program.config === "auto" ){
-	var subs = ["practice", "shohousen", "refer"];
+function fetchConfig(progServiceUrl, subs, cb){
 	var config = {};
-	var serviceUrl = url.parse(program.service);
+	var serviceUrl = url.parse(progServiceUrl);
 	conti.forEachPara(subs, function(sub, done){
 		console.log("fetching config for", sub);
 		var req = http.request({
@@ -58,18 +46,38 @@ if( program.config === "auto" ){
 				done();
 			});
 			res.on("error", function(err){
-				done(err.message);
+				done(err);
 			});
+		});
+		req.on("error", function(err){
+			done(err);
 		});
 		req.end();
 	}, function(err){
 		if( err ){
-			throw new Error("cannot fetch config for " + sub + ": ", err);
+			cb(err);
+			return;
+		}
+		cb(undefined, config);
+	});
+}
+
+function tryAutoConfig(){
+	var subs = ["practice", "shohousen", "refer"];
+	fetchConfig(program.service, subs, function(err, config){
+		if( err ){
+			if( err.code === "ECONNREFUSED" ){
+				console.log("server not responding, trying later...");
+				setTimeout(function(){
+					tryAutoConfig();
+				}, 10000);
+			} else {
+				console.log("ERROR: " + err);
+			}
+			return;
 		}
 		run(config);
 	});
-} else {
-	run(Config.read(program.config));
 }
 
 function run(config){
@@ -82,6 +90,19 @@ function run(config){
 	};
 	ensureDir(config.printer["setting-dir"]);
 	app.run(config);
+}
+
+program
+	.option("-c, --config <configpath>", "Read configuration", "auto")
+	.option("-s, --service <service-url>", "Set service server", "http://localhost:9000")
+	.option("-p, --port <port>", "Set listening port", toInt, 9001)
+	.option("--printer-settings <dirname>", "Set printer settings directory", "./printer-settings")
+	.parse(process.argv);
+
+if( program.config === "auto" ){
+	tryAutoConfig();
+} else {
+	run(Config.read(program.config));
 }
 
 
