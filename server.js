@@ -63,7 +63,7 @@ function fetchConfig(progServiceUrl, subs, cb){
 }
 
 function tryAutoConfig(){
-	var subs = ["practice", "shohousen", "refer"];
+	var subs = ["practice", "shohousen", "refer", "pharma"];
 	fetchConfig(program.service, subs, function(err, config){
 		if( err ){
 			if( err.code === "ECONNREFUSED" ){

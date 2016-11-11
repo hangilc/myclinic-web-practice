@@ -19,6 +19,9 @@ exports.run = function(config){
 		"refer": {
 			module: require("myclinic-refer"),
 		},
+		"pharma": {
+			module: require("myclinic-pharma")
+		},
 		"printer": {
 			module: require("myclinic-drawer-print-server"),
 		}
