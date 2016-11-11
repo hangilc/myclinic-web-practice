@@ -4,7 +4,7 @@
   "dependencies": {
     "body-parser": {
       "version": "1.15.2",
-      "from": "body-parser@*",
+      "from": "body-parser@>=1.15.2 <2.0.0",
       "resolved": "https://registry.npmjs.org/body-parser/-/body-parser-1.15.2.tgz",
       "dependencies": {
         "bytes": {
@@ -118,7 +118,7 @@
     },
     "commander": {
       "version": "2.9.0",
-      "from": "commander@*",
+      "from": "commander@>=2.9.0 <3.0.0",
       "resolved": "https://registry.npmjs.org/commander/-/commander-2.9.0.tgz",
       "dependencies": {
         "graceful-readlink": {
@@ -130,11 +130,12 @@
     },
     "conti": {
       "version": "1.3.4",
-      "from": "conti@*"
+      "from": "conti@1.3.4",
+      "resolved": "https://registry.npmjs.org/conti/-/conti-1.3.4.tgz"
     },
     "express": {
       "version": "4.14.0",
-      "from": "express@*",
+      "from": "express@>=4.14.0 <5.0.0",
       "resolved": "https://registry.npmjs.org/express/-/express-4.14.0.tgz",
       "dependencies": {
         "accepts": {
@@ -386,7 +387,7 @@
     },
     "http-proxy": {
       "version": "1.15.2",
-      "from": "http-proxy@*",
+      "from": "http-proxy@>=1.15.2 <2.0.0",
       "resolved": "https://registry.npmjs.org/http-proxy/-/http-proxy-1.15.2.tgz",
       "dependencies": {
         "eventemitter3": {
@@ -403,12 +404,12 @@
     },
     "mkdirp": {
       "version": "0.5.1",
-      "from": "mkdirp@*",
+      "from": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz",
       "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz",
       "dependencies": {
         "minimist": {
           "version": "0.0.8",
-          "from": "minimist@0.0.8",
+          "from": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
           "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz"
         }
       }
@@ -416,7 +417,6 @@
     "myclinic-config": {
       "version": "2.2.1",
       "from": "myclinic-config@2.2.1",
-      "resolved": "https://registry.npmjs.org/myclinic-config/-/myclinic-config-2.2.1.tgz",
       "dependencies": {
         "ini": {
           "version": "1.3.4",
@@ -427,11 +427,13 @@
     },
     "myclinic-drawer-print-server": {
       "version": "2.0.0",
-      "from": "myclinic-drawer-print-server@*",
+      "from": "myclinic-drawer-print-server@>=2.0.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/myclinic-drawer-print-server/-/myclinic-drawer-print-server-2.0.0.tgz",
       "dependencies": {
         "myclinic-drawer-printer": {
           "version": "1.3.1",
           "from": "myclinic-drawer-printer@>=1.1.4 <2.0.0",
+          "resolved": "https://registry.npmjs.org/myclinic-drawer-printer/-/myclinic-drawer-printer-1.3.1.tgz",
           "dependencies": {
             "bindings": {
               "version": "1.2.1",
@@ -440,7 +442,8 @@
             },
             "conti": {
               "version": "1.3.4",
-              "from": "conti@>=1.3.1 <2.0.0"
+              "from": "conti@>=1.3.1 <2.0.0",
+              "resolved": "https://registry.npmjs.org/conti/-/conti-1.3.4.tgz"
             },
             "nan": {
               "version": "2.4.0",
@@ -451,26 +454,34 @@
         }
       }
     },
+    "myclinic-pharma": {
+      "version": "1.2.1",
+      "from": "myclinic-pharma@*",
+      "resolved": "https://registry.npmjs.org/myclinic-pharma/-/myclinic-pharma-1.2.1.tgz"
+    },
     "myclinic-practice": {
       "version": "1.1.19",
       "from": "myclinic-practice@1.1.19",
+      "resolved": "https://registry.npmjs.org/myclinic-practice/-/myclinic-practice-1.1.19.tgz",
       "dependencies": {
         "moment": {
           "version": "2.16.0",
-          "from": "moment@>=2.14.1 <3.0.0",
+          "from": "https://registry.npmjs.org/moment/-/moment-2.16.0.tgz",
           "resolved": "https://registry.npmjs.org/moment/-/moment-2.16.0.tgz"
         },
         "myclinic-consts": {
           "version": "1.0.0",
-          "from": "myclinic-consts@>=1.0.0 <2.0.0"
+          "from": "myclinic-consts@1.0.0",
+          "resolved": "https://registry.npmjs.org/myclinic-consts/-/myclinic-consts-1.0.0.tgz"
         },
         "myclinic-service-api": {
           "version": "1.0.5",
-          "from": "myclinic-service-api@>=1.0.0 <2.0.0",
+          "from": "myclinic-service-api@1.0.5",
+          "resolved": "https://registry.npmjs.org/myclinic-service-api/-/myclinic-service-api-1.0.5.tgz",
           "dependencies": {
             "setimmediate": {
               "version": "1.0.5",
-              "from": "setimmediate@>=1.0.5 <2.0.0",
+              "from": "https://registry.npmjs.org/setimmediate/-/setimmediate-1.0.5.tgz",
               "resolved": "https://registry.npmjs.org/setimmediate/-/setimmediate-1.0.5.tgz"
             }
           }
@@ -479,7 +490,8 @@
     },
     "myclinic-refer": {
       "version": "1.1.0",
-      "from": "myclinic-refer@1.1.0",
+      "from": "myclinic-refer@>=1.1.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/myclinic-refer/-/myclinic-refer-1.1.0.tgz",
       "dependencies": {
         "hogan.js": {
           "version": "3.0.2",
@@ -507,15 +519,18 @@
         },
         "kanjidate": {
           "version": "1.1.0",
-          "from": "kanjidate@>=1.1.0 <2.0.0"
+          "from": "kanjidate@>=1.1.0 <2.0.0",
+          "resolved": "https://registry.npmjs.org/kanjidate/-/kanjidate-1.1.0.tgz"
         },
         "myclinic-drawer-forms": {
           "version": "1.0.5",
           "from": "myclinic-drawer-forms@>=1.0.2 <2.0.0",
+          "resolved": "https://registry.npmjs.org/myclinic-drawer-forms/-/myclinic-drawer-forms-1.0.5.tgz",
           "dependencies": {
             "myclinic-drawer": {
               "version": "1.0.4",
-              "from": "myclinic-drawer@>=1.0.1 <2.0.0"
+              "from": "myclinic-drawer@>=1.0.1 <2.0.0",
+              "resolved": "https://registry.npmjs.org/myclinic-drawer/-/myclinic-drawer-1.0.4.tgz"
             }
           }
         }
@@ -523,7 +538,8 @@
     },
     "myclinic-shohousen": {
       "version": "1.1.0",
-      "from": "myclinic-shohousen@*",
+      "from": "myclinic-shohousen@>=1.1.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/myclinic-shohousen/-/myclinic-shohousen-1.1.0.tgz",
       "dependencies": {
         "hogan.js": {
           "version": "3.0.2",
@@ -551,15 +567,18 @@
         },
         "myclinic-drawer": {
           "version": "1.0.4",
-          "from": "myclinic-drawer@>=1.0.0 <2.0.0"
+          "from": "myclinic-drawer@>=1.0.0 <2.0.0",
+          "resolved": "https://registry.npmjs.org/myclinic-drawer/-/myclinic-drawer-1.0.4.tgz"
         },
         "myclinic-drawer-forms": {
           "version": "1.0.5",
-          "from": "myclinic-drawer-forms@>=1.0.0 <2.0.0"
+          "from": "myclinic-drawer-forms@>=1.0.2 <2.0.0",
+          "resolved": "https://registry.npmjs.org/myclinic-drawer-forms/-/myclinic-drawer-forms-1.0.5.tgz"
         },
         "myclinic-drawer-svg": {
           "version": "1.0.1",
-          "from": "myclinic-drawer-svg@>=1.0.1 <2.0.0"
+          "from": "myclinic-drawer-svg@>=1.0.1 <2.0.0",
+          "resolved": "https://registry.npmjs.org/myclinic-drawer-svg/-/myclinic-drawer-svg-1.0.1.tgz"
         }
       }
     }
