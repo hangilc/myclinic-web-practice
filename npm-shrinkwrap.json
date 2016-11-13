@@ -124,8 +124,8 @@
       }
     },
     "myclinic-web": {
-      "version": "1.0.1",
-      "from": "myclinic-web@1.0.1",
+      "version": "1.0.2",
+      "from": "myclinic-web@1.0.2",
       "dependencies": {
         "body-parser": {
           "version": "1.15.2",

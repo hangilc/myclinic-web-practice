@@ -25,4 +25,4 @@ var subs = [
 	}
 ];
 
-web.cmd.runFromCommand(subs);
+web.cmd.runFromCommand(subs, 9001);
