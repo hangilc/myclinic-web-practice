@@ -18,11 +18,10 @@
   "homepage": "https://github.com/hangilc/myclinic-web-practice#readme",
   "dependencies": {
     "conti": "https://registry.npmjs.org/conti/-/conti-1.3.4.tgz",
-    "myclinic-drawer-print-server": "^2.0.0",
     "myclinic-pharma": "^1.2.1",
     "myclinic-practice": "^1.1.17",
     "myclinic-refer": "^1.1.0",
     "myclinic-shohousen": "^1.1.0",
-    "myclinic-web": "^1.0.0"
+    "myclinic-web": "^1.0.1"
   }
 }
