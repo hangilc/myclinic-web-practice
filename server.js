@@ -22,6 +22,11 @@ var subs = [
 		name: "pharma",
 		module: require("myclinic-pharma"),
 		configKey: "pharma"
+	},
+	{
+		name: "cashier",
+		module: require("myclinic-cashier"),
+		configKey: "cashier"
 	}
 ];
 
