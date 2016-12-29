@@ -27,6 +27,11 @@ var subs = [
 		name: "cashier",
 		module: require("myclinic-cashier"),
 		configKey: "cashier"
+	},
+	{
+		name: "reception",
+		module: require("myclinic-reception"),
+		configKey: "reception"
 	}
 ];
 
