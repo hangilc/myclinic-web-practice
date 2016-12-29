@@ -30,4 +30,7 @@ var subs = [
 	}
 ];
 
-web.cmd.runFromCommand(subs, 9001);
+web.cmd.runFromCommand(subs, {
+	port: 9001,
+	usePrinter: true
+});
