@@ -32,6 +32,11 @@ var subs = [
 		name: "reception",
 		module: require("myclinic-reception"),
 		configKey: "reception"
+	},
+	{
+		name: "records",
+		module: require("myclinic-records"),
+		configKey: "records"
 	}
 ];
 

@@ -23,6 +23,7 @@
     "myclinic-pharma": "^1.2.1",
     "myclinic-practice": "^1.1.22",
     "myclinic-reception": "^1.0.1",
+    "myclinic-records": "^1.0.0",
     "myclinic-refer": "^1.1.0",
     "myclinic-shohousen": "^1.1.0",
     "myclinic-web": "^1.0.10"
