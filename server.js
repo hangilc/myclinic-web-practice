@@ -37,6 +37,11 @@ var subs = [
 		name: "records",
 		module: require("myclinic-records"),
 		configKey: "records"
+	},
+	{
+		name: "meisai",
+		module: require("myclinic-meisai"),
+		configKey: "meisai"
 	}
 ];
 

@@ -20,12 +20,13 @@
     "conti": "^1.3.5",
     "myclinic-cashier": "^1.0.0",
     "myclinic-drawer-print-server": "^2.0.1",
+    "myclinic-meisai": "^1.0.1",
     "myclinic-pharma": "^1.2.1",
     "myclinic-practice": "^1.1.22",
     "myclinic-reception": "^1.0.1",
     "myclinic-records": "^1.0.0",
     "myclinic-refer": "^1.1.0",
     "myclinic-shohousen": "^1.1.0",
-    "myclinic-web": "^1.0.12"
+    "myclinic-web": "^1.0.14"
   }
 }
