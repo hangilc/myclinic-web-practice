@@ -1,6 +1,6 @@
 {
   "name": "myclinic-web-practice",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Local web server for practice",
   "main": "index.js",
   "scripts": {
